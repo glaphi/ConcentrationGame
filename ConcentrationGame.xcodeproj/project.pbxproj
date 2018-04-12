@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		FA1C96D7207F6BCC001C1FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C96D6207F6BCC001C1FFC /* AppDelegate.swift */; };
-		FA1C96D9207F6BCC001C1FFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C96D8207F6BCC001C1FFC /* ViewController.swift */; };
+		FA1C96D9207F6BCC001C1FFC /* ConcentractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C96D8207F6BCC001C1FFC /* ConcentractionViewController.swift */; };
 		FA1C96DC207F6BCC001C1FFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1C96DA207F6BCC001C1FFC /* Main.storyboard */; };
 		FA1C96DE207F6BCD001C1FFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1C96DD207F6BCD001C1FFC /* Assets.xcassets */; };
 		FA1C96E1207F6BCD001C1FFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1C96DF207F6BCD001C1FFC /* LaunchScreen.storyboard */; };
+		FA1C96E9207F7B61001C1FFC /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C96E8207F7B61001C1FFC /* Concentration.swift */; };
+		FA1C96EB207F7BD6001C1FFC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C96EA207F7BD6001C1FFC /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA1C96D3207F6BCC001C1FFC /* ConcentrationGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcentrationGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1C96D6207F6BCC001C1FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA1C96D8207F6BCC001C1FFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA1C96D8207F6BCC001C1FFC /* ConcentractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentractionViewController.swift; sourceTree = "<group>"; };
 		FA1C96DB207F6BCC001C1FFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA1C96DD207F6BCD001C1FFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA1C96E0207F6BCD001C1FFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA1C96E2207F6BCD001C1FFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA1C96E8207F7B61001C1FFC /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
+		FA1C96EA207F7BD6001C1FFC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				FA1C96D6207F6BCC001C1FFC /* AppDelegate.swift */,
-				FA1C96D8207F6BCC001C1FFC /* ViewController.swift */,
+				FA1C96D8207F6BCC001C1FFC /* ConcentractionViewController.swift */,
+				FA1C96E8207F7B61001C1FFC /* Concentration.swift */,
+				FA1C96EA207F7BD6001C1FFC /* Card.swift */,
 				FA1C96DA207F6BCC001C1FFC /* Main.storyboard */,
 				FA1C96DD207F6BCD001C1FFC /* Assets.xcassets */,
 				FA1C96DF207F6BCD001C1FFC /* LaunchScreen.storyboard */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA1C96D9207F6BCC001C1FFC /* ViewController.swift in Sources */,
+				FA1C96D9207F6BCC001C1FFC /* ConcentractionViewController.swift in Sources */,
 				FA1C96D7207F6BCC001C1FFC /* AppDelegate.swift in Sources */,
+				FA1C96E9207F7B61001C1FFC /* Concentration.swift in Sources */,
+				FA1C96EB207F7BD6001C1FFC /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
