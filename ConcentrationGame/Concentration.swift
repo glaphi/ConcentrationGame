@@ -8,38 +8,44 @@
 
 import Foundation
 
-class Concentration {
+struct Concentration {
     
-    var cards: [Card] = []
+    private(set) var cards: [Card] = []
     
-    var indexOfOneAndOnlyFaceUpCard: Int?
+    private var indexOfOneAndOnlyFaceUpCard: Int? {
+        get {
+            return cards.indices.filter{cards[$0].isFaceUp}.oneAndOnly
+        }
+        set {
+            for index in cards.indices {
+                cards[index].isFaceUp = (index == newValue)
+            }
+        }
+    }
     
-    func choseCard(at index: Int) {
+    mutating func choseCard(at index: Int) {
+        assert(cards.indices.contains(index), "Concentration.chooseCard(at: \(index)): chosen index not in cards")
         if !cards[index].isMatched {
             // matching with the only face up card
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
-                if cards[matchIndex].id == cards[index].id {
+                if cards[matchIndex] == cards[index] {
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
                 }
                 cards[index].isFaceUp = true
-                indexOfOneAndOnlyFaceUpCard = nil
             } else {
                 // no cars or 2 cards are face up
-                for flipDownIndex in cards.indices {
-                    cards[flipDownIndex].isFaceUp = false
-                }
-                cards[index].isFaceUp = true
                 indexOfOneAndOnlyFaceUpCard = index
             }
         }
     }
-        
+    
     init(numberOfPairsOfCards: Int) {
+        assert(numberOfPairsOfCards > 0, "Concentration.init(\(numberOfPairsOfCards)) : number of pairs must be greater than 0")
         for _ in 0..<numberOfPairsOfCards {
             let card: Card = Card()
-            
-            cards += [card, card]
+            cards.append(card)
+            cards.append(card)
         }
         // TODO: Shuffle the cards
     }
